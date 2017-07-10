@@ -1,0 +1,53 @@
+<!--Form for farmers-->
+
+<center><%= form_for(@farmer) do |f| %>
+ <% if @success %>
+ 	<div class="success"><%= @success %></div>
+
+ 	<% else %>
+
+ 	<div class="danger"><%= @error %></div>
+ <% end %>
+	<div>
+		<label>Farmer Name</label>
+		  <%= f.text_field :name %>
+	</div>
+
+	<div>
+		<label>Farm Size</label>
+		  <%= f.text_field :farm_size %>
+
+	</div>
+	<div>
+		<label>Number of Animals</label>
+
+		  <%= f.text_field :number_of_animals %>
+
+	</div>
+	<div>
+		
+		<label>Location of Farm</label>
+		  <%= f.text_field :farm_location %>
+
+	</div>
+	<div>
+		<label>Primary Phone Number</label>
+		  <%= f.text_field :phone_number %>
+
+	</div>
+	<div>
+		
+		<label>Address if any</label>
+		  <%= f.text_field :address %>
+
+	</div>
+	<div>
+		<label>Profile Picture</label>
+		  <%= f.file_field :profile_pic %>
+
+	</div>
+	<div>
+		  <%= f.submit "Add New Farmer", class: "btn btn-warning"  %>
+
+	</div>
+<% end %></center>

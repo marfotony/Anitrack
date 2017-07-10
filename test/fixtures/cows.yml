@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: MyString
+  cow_owner: MyString
+  date_of_birth: MyString
+  weight: 1
+  color: MyString
+  tag_number: MyString
+  temperature: MyString
+  missing: false
+
+two:
+  id: MyString
+  cow_owner: MyString
+  date_of_birth: MyString
+  weight: 1
+  color: MyString
+  tag_number: MyString
+  temperature: MyString
+  missing: false

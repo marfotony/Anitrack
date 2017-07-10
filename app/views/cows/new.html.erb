@@ -1,0 +1,48 @@
+
+<%= form_for @cow do |f| %>
+ <% if @success %>
+ 	<div class="success"><%= @success %></div>
+
+ 	<% else %>
+
+ 	<div class="danger"><%= @error %></div>
+ <% end %>
+	
+	<div>
+		<label>Date of Birth</label>
+		  <%= f.text_field :date_of_birth %>
+
+	</div>
+	<div>
+		<label>Initial Weight</label>
+
+		  <%= f.text_field :weight %>
+
+	</div>
+	<div>
+		
+		<label>Color of Cow</label>
+		  <%= f.text_field :color %>
+
+	</div>
+	<div>
+		<label>Tag Number</label>
+		  <%= f.text_field :tag_number %>
+
+	</div>
+	<div>
+		
+		<label>Initial Temperature</label>
+		  <%= f.text_field :temperature %>
+
+	</div>
+	<div>
+		<label>Status</label>
+		  <%= f.select :status, generate_status, {} %>
+
+	</div>
+	<div>
+		  <%= f.submit "Add Cow", class: "btn btn-warning"  %>
+
+	</div>
+<% end %>
