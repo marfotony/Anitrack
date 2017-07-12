@@ -1,6 +1,6 @@
 class FarmersController < ApplicationController
 	def index
-		
+
 	end
 
 	def show
@@ -15,23 +15,25 @@ class FarmersController < ApplicationController
 		@farmer = Farmer.new(farmer_params)
 
 		if @farmer.save
-				@success = "Cow added successfully"
-		else 
+				@success = "Farmer added successfully"
+				redirect_to farmers_path
+		else
 			@error = "Unable to save. Please try again"
+			render 'new'
 		end
-		render 'new'
+
 	end
 
 	def update
-		
+
 	end
 
 	def destroy
-		
+
 	end
 
 	def method_name
-		
+
 	end
 
     private

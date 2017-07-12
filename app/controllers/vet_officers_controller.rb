@@ -1,7 +1,7 @@
 class VetOfficersController < ApplicationController
 
 	def index
-		
+
 	end
 
 	def show
@@ -17,22 +17,24 @@ class VetOfficersController < ApplicationController
 
 		if @vet_officer.save
 				@success = "New VetOfficer added"
-		else 
+				redirect_to vet_officers_path
+		else
 			@error = "Unable to save. Please try again"
+				render 'new'
 		end
-		render 'new'
+
 	end
 
 	def update
-		
+
 	end
 
 	def destroy
-		
+
 	end
 
 	def method_name
-		
+
 	end
 
     private
