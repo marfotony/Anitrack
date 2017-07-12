@@ -7,7 +7,27 @@
 
  	<div class="danger"><%= @error %></div>
  <% end %>
-	
+
+
+<div>
+
+
+ <label>  Cow Owner </label>
+
+
+       <%= f.select(:farmer_id, options_for_select(@farmer_options))%>
+
+	</div>
+
+  <div>
+	<label> Vet Officer </label>
+
+
+
+     <%= f.select(:VetOfficer_id, options_for_select(@vet_officer_options))%>
+
+
+	</div>
 	<div>
 		<label>Date of Birth</label>
 		  <%= f.text_field :date_of_birth %>
@@ -20,7 +40,7 @@
 
 	</div>
 	<div>
-		
+
 		<label>Color of Cow</label>
 		  <%= f.text_field :color %>
 
@@ -31,7 +51,7 @@
 
 	</div>
 	<div>
-		
+
 		<label>Initial Temperature</label>
 		  <%= f.text_field :temperature %>
 
