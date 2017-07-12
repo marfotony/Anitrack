@@ -17,7 +17,7 @@ class VetOfficersController < ApplicationController
 
 		if @vet_officer.save
 				@success = "New VetOfficer added"
-				redirect_to vet_officers_path
+				redirect_to cows_path
 		else
 			@error = "Unable to save. Please try again"
 				render 'new'

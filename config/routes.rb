@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
+  root 'static_pages#home'
 
   #get 'admin/index'
 
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :farmers
 
   devise_scope :admin do
-     get '/dashboard', to: 'admin#index'
+     get '/dashboard', to: 'cows#index'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

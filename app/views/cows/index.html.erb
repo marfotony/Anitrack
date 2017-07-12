@@ -1,1 +1,389 @@
-<h1> Home of Cows </h1>
+
+
+
+  <div class="app app-default">
+
+ <%= render 'layouts/aside' %>
+
+<script type="text/ng-template" id="sidebar-dropdown.tpl.html">
+  <div class="dropdown-background">
+    <div class="bg"></div>
+  </div>
+  <div class="dropdown-container">
+    <!-- {{list}} -->
+  </div>
+</script>
+
+
+<div class="app-container">
+
+  <nav class="navbar navbar-default" id="navbar">
+  <div class="container-fluid">
+    <div class="navbar-collapse collapse in">
+      <ul class="nav navbar-nav navbar-mobile">
+        <li>
+          <button type="button" class="sidebar-toggle">
+            <i class="fa fa-bars"></i>
+          </button>
+        </li>
+        <li class="logo">
+          <a class="navbar-brand" href="#"><span class="highlight">-----</span> ---</a>
+        </li>
+        <li>
+          <button type="button" class="navbar-toggle">
+            <%= image_tag("profile-img", :class => "profile-img" ) %>
+         <!--   <img class="profile-img" src="../assets/images/profile.png"> -->
+          </button>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-left">
+      <li>  <%= image_tag("true-logo.png",  :width => "80px" , :height => "80px" ) %>   <!--<img src="../assets/images/true-logo.png" width="80px" height="80px">-->  </li>
+        <span class="highlight">Your Dashboard</span>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+       <li class="navbar-search hidden-sm">
+          <input id="search" type="text" placeholder="Search..">
+          <button class="btn-search"><i class="fa fa-search"></i></button>
+        </li>
+        <li class="dropdown notification">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="icon"><i class="fa fa-shopping-basket" aria-hidden="true"></i></div>
+            <div class="title">Support Tickets</div>
+            <div class="count">1</div>
+          </a>
+          <div class="dropdown-menu">
+            <ul>
+              <li class="dropdown-header">Feed</li>
+              <li class="dropdown-empty">No New Feed</li>
+              <li class="dropdown-footer">
+                <a href="#">View All <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="dropdown notification warning">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="icon"><i class="fa fa-comments" aria-hidden="true"></i></div>
+            <div class="title">Unread Messages</div>
+            <div class="count">3</div>
+          </a>
+          <div class="dropdown-menu">
+            <ul>
+              <li class="dropdown-header">Message</li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-warning pull-right">10</span>
+                  <div class="message">
+                    <img class="profile" src="https://placehold.it/100x100">
+                    <div class="content">
+                      <div class="title">"Two Animals have been reported missing.Plea..."</div>
+                      <div class="description">Winnie Akoko</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-warning pull-right">5</span>
+                  <div class="message">
+                    <img class="profile" src="https://placehold.it/100x100">
+                    <div class="content">
+                      <div class="title">"11 of your Animals recently had abnormal temperatures. View more..."</div>
+                      <div class="description">Marfo Tony</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-warning pull-right">2</span>
+                  <div class="message">
+                    <img class="profile" src="https://placehold.it/100x100">
+                    <div class="content">
+                      <div class="title">"Animal JH4322 has not been vaccinated yet.."</div>
+                      <div class="description">Link me to Veterinary</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="dropdown-footer">
+                <a href="#">View All <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="dropdown notification danger">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="icon"><i class="fa fa-bell" aria-hidden="true"></i></div>
+            <div class="title">System Notifications</div>
+            <div class="count">10</div>
+          </a>
+          <div class="dropdown-menu">
+            <ul>
+              <li class="dropdown-header">Notification</li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-danger pull-right">8</span>
+                  <div class="message">
+                    <div class="content">
+                      <div class="title">New Notification</div>
+                      <div class="description">Animal JH3443 has temperature above normal</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-danger pull-right">5</span>
+                  Inbox
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-danger pull-right">5</span>
+                  Issues Report
+                </a>
+              </li>
+              <li class="dropdown-footer">
+                <a href="#">View All <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="dropdown profile">
+          <a href="/html/pages/profile.html" class="dropdown-toggle"  data-toggle="dropdown">
+            <!--<img class="profile-img" src="../assets/images/profile.png">-->
+                <%= image_tag("true-logo.png",  :class => "profile-img" ) %>
+            <div class="title">Profile</div>
+          </a>
+          <div class="dropdown-menu">
+            <div class="profile-info">
+              <h4 class="username">Jamal Haji</h4>
+            </div>
+            <ul class="action">
+              <li>
+                <a href="#">
+                  Profile
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-danger pull-right">5</span>
+                  My Inbox
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Setting
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+<!--
+  <div class="btn-floating" id="help-actions">
+  <div class="btn-bg"></div>
+  <button type="button" class="btn btn-default btn-toggle" data-toggle="toggle" data-target="#help-actions">
+    <i class="icon fa fa-plus"></i>
+    <span class="help-text">Shortcut</span>
+  </button>
+  <div class="toggle-content">
+    <ul class="actions">
+      <li> </li>
+      <li><a href="/pages/vet-profile.php">Connect to Vet Service</a></li>
+      <li><a href="/pages/lost.php">Report Lost Animals</a></li>
+      <li><a href="/uikits/card.php">Send Notifications</a></li>
+    </ul>
+  </div>
+</div> -->
+
+
+<div class="row">
+  <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+      <a class="card card-banner card-green-light">
+  <div class="card-body">
+<img src='http://dreamstartltd.com/wp-content/uploads/cow.png'/>
+   <div class="content">
+      <div class="title">My Herd</div>
+      <div class="value"><span class="sign"></span><%= @cows.try(:count)%></div>
+    </div>
+  </div>
+</a>
+
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+      <a class="card card-banner card-blue">
+  <div class="card-body">
+<img src='http://dreamstartltd.com/wp-content/uploads/cowlost.png'/>
+    <div class="content">
+      <div class="title">Animals Missing</div>
+      <div class="value"><span class="sign"></span>2</div>
+    </div>
+  </div>
+</a>
+
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+      <a class="card card-banner card-yellow-light">
+  <div class="card-body">
+<img src='http://dreamstartltd.com/wp-content/uploads/cowtemp.png'/>
+    <div class="content">
+      <div class="title">High Temperature </div>
+      <div class="value"><span class="sign"></span>11</div>
+    </div>
+  </div>
+</a>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <div class="card card-mini">
+      <div class="card-header">
+        <div class="card-title">Recent Reports</div>
+        <ul class="card-action">
+          <li>
+            <a href="/">
+              <i class="fa fa-refresh"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body no-padding table-responsive">
+        <table class="table card-table">
+          <thead>
+            <tr>
+              <th>Animal</th>
+              <th class="right">Animal ID</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+          <% for cowe in @cows do %>
+            <tr>
+              <td>QR<%= cowe.try(:tag_number)%></td>
+              <td class="right"><%= cowe.try(:tag_number)%></td>
+              <td><span class="badge badge-success badge-icon"><i class="fa fa-check" aria-hidden="true"></i><span><%= cowe.try(:status) %></span></span></td>
+            </tr>
+            <% end %>
+            <!--
+            <tr>
+              <td>Dolly</td>
+              <td class="right">JH4345</td>
+              <td><span class="badge badge-success badge-icon"><i class="fa fa-clock-o" aria-hidden="true"></i><span>Healthy</span></span></td>
+            </tr>
+            <tr>
+              <td>Sofolik</td>
+              <td class="right">JH4431</td>
+              <td><span class="badge badge-danger badge-icon"><i class="fa fa-thermometer-half" aria-hidden="true"></i><span>Temperature above normal</span></span></td>
+            </tr>
+            <tr>
+              <td>Duncan</td>
+              <td class="right">JH4210</td>
+              <td><span class="badge badge-warning badge-icon"><i class="fa fa-times" aria-hidden="true"></i><span>Vacinnation in 3 days</span></span></td>
+            </tr>
+            <tr>
+              <td>Molly</td>
+              <td class="right">JH8836</td>
+              <td><span class="badge badge-primary badge-icon"><i class="fa fa-arrow-down" aria-hidden="true"></i><span>Minimal Activity</span></span></td>
+            </tr>
+            <tr>
+              <td>Yaawood</td>
+              <td class="right">JH7640</td>
+              <td><span class="badge badge-danger badge-icon"><i class="fa fa-credit-card" aria-hidden="true"></i><span>Missing</span></span></td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <div class="card card-tab card-mini">
+      <div class="card-header">
+        <ul class="nav nav-tabs tab-stats">
+          <li role="tab1" class="active">
+            <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">All Reports</a>
+          </li>
+          <li role="tab2">
+            <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">By Date</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body tab-content">
+        <div role="tabpanel" class="tab-pane active" id="tab1">
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="chart ct-chart-browser ct-perfect-fourth"></div>
+            </div>
+            <div class="col-sm-4">
+              <ul class="chart-label">
+                <li class="ct-label ct-series-a">Total Healthy Animals</li>
+                <li class="ct-label ct-series-b">Total Activity</li>
+                <li class="ct-label ct-series-c">Vaccinated Recently</li>
+                <li class="ct-label ct-series-d">Total Lameness</li>
+                <li class="ct-label ct-series-e">Other</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab2">
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="chart ct-chart-os ct-perfect-fourth"></div>
+            </div>
+            <div class="col-sm-4">
+              <ul class="chart-label">
+                <li class="ct-label ct-series-a">Total Healthy Animals</li>
+                <li class="ct-label ct-series-b">Total Activity</li>
+                <li class="ct-label ct-series-c">Vaccinated</li>
+                <li class="ct-label ct-series-d">Total Lameness</li>
+                <li class="ct-label ct-series-e">Other</li>
+              </ul>
+            </div>
+          </div>
+          <date>Date Goes here</date>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab3">
+        </div>
+      </div>
+    </div>
+  </div>
+  <li> <%= link_to "Add New Animal" , new_cow_path %></li>
+  <li> <%= link_to "Add New Farmer" , new_farmer_path %></li>
+  <li> <%= link_to "Add VetOfficer" , new_vet_officer_path %> </li>
+</div>
+  <footer class="app-footer">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="footer-copyright">
+        Copyright © 2016 AniTrack International.
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+
+  </div>
+
+

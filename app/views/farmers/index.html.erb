@@ -1,1 +1,28 @@
-<h1> Home of Farmer </h1>
+
+ <h1> Farmer List  </h1>
+
+ <br>
+ <br>
+  <div class="container">
+     <div class="row" >
+       <div class="col-md-6">
+           <table class="table table-striped">
+               <thead>
+                <th> Name  </th>
+                 <th> Location  </th>
+                       <thead>
+                 <tbody>
+
+                  <% for farmer in @farmers do %>
+                     <tr>
+                  <td>  <%= farmer.try(:name) %> </td>
+                <td>  <%= farmer.try(:farm_location) %>
+                </tr>
+                  <% end %>
+
+ </tbody>
+</table>
+        </div>
+      </div>
+   </div>
+

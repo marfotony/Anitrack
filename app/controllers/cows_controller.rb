@@ -3,7 +3,7 @@ class CowsController < ApplicationController
 	#before_action  :set_vet
 
 	def index
-
+    @cows = Cow.all
 	end
 
 	def show

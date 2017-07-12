@@ -1,6 +1,6 @@
 class FarmersController < ApplicationController
 	def index
-
+		@farmers = Farmer.all
 	end
 
 	def show
@@ -16,7 +16,7 @@ class FarmersController < ApplicationController
 
 		if @farmer.save
 				@success = "Farmer added successfully"
-				redirect_to farmers_path
+				redirect_to cows_path
 		else
 			@error = "Unable to save. Please try again"
 			render 'new'
