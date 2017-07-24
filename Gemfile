@@ -31,6 +31,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'bcrypt', '~> 3.1.11'
 
+gem 'pg'
+
 gem 'devise'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
