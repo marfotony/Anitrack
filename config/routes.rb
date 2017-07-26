@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   devise_scope :admin do
      get '/dashboard', to: 'cows#index'
   end
+
+  post "cows/call_action" => "cows#call_action"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

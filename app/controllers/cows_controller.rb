@@ -50,7 +50,6 @@ class CowsController < ApplicationController
 
 	end
 
-
 	private
 
 	def cow_params

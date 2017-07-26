@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require_tree .
 
-function sendEmail(number, content) {
+function sendTextMessage(number, content) {
   return {
   "async": true,
   "crossDomain": true,
@@ -55,12 +55,10 @@ var ready =  function(){
       var $this =  $(this);
       $this.text("sending..");
 
-      $.ajax(sendEmail("+233" + phoneNumber, content)).done(function (response) {
+      $.ajax(sendTextMessage("+233" + phoneNumber, content)).done(function (response) {
         console.log(response);
         $this.text("sent");
       });
-
-
 
     });
 }
