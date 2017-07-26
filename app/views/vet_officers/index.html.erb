@@ -1,1 +1,48 @@
-<h1> Home of Vet Officer </h1>
+<div style="margin-top:5%; text-align: center;">
+  <h1> Vetenary list </h1>
+</div>
+
+  <div class="container">
+     <div class="row" >
+
+       <div class="col-md-6">
+           <table class="table table-striped">
+               <thead>
+                <th> Name  </th>
+                <th> Location  </th>
+                <th> Message </th>
+                <th> Edit  </th>
+                <th> Delete  </th>
+               </thead>
+                <tbody>
+
+                <% @vet_officers.each do |vet_officer| %>
+                <% if @vet_officers.count > 0 %>
+                <tr>
+                  <td>  <%= vet_officer.name %></td>
+                  <td>  <%= vet_officer.location %></td>
+                  <td>
+                    <button
+                     id="message-farmer"
+                     class="btn btn-success message-vet"
+                     vet_officer  = "<%= vet_officer.to_json%>"
+                    >Message</button>
+                  </td>
+                  <td><button class="btn btn-primary">Edit</button></td>
+                  <td><button class="btn btn-danger"> Delete</button></td>
+                </tr>
+                <% else %>
+                  <h1>No Vet Officers Yet</h1>
+                <% end %>
+                <% end %>
+
+              </tbody>
+            </table>
+        </div>
+
+
+      </div>
+
+
+
+   </div>

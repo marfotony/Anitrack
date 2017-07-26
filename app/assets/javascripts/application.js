@@ -40,6 +40,7 @@ function sendTextMessage(number, content) {
 
 
 var ready =  function(){
+  // send message to farmer
   $(".message-farmer").unbind('click').click(function(){
       var farmer          = $.parseJSON($(this).attr("farmer"));
       var name            = farmer.name;
@@ -61,6 +62,27 @@ var ready =  function(){
       });
 
     });
+
+
+    //send message to vet_officer
+    $(".message-vet").unbind('click').click(function(){
+      var vet_officer = $.parseJSON($(this).attr("vet_officer"));
+      var location    = vet_officer.location;
+      var address     = vet_officer.address;
+      var name        = vet_officer.name;
+      var phoneNumber = vet_officer.phone_number;
+
+      var content =  "Hello " + name + "we have a farmer who has a problem with their flock please contact them";
+      var $this =  $(this);
+      $this.text("sending..");
+
+      $.ajax(sendTextMessage("+233" + phoneNumber, content)).done(function (response) {
+        console.log(response);
+        $this.text("sent");
+      });
+
+
+    })
 }
 
 

@@ -1,7 +1,7 @@
 class VetOfficersController < ApplicationController
 
 	def index
-
+		@vet_officers = VetOfficer.all
 	end
 
 	def show
