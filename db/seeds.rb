@@ -25,7 +25,7 @@ temp        = [ "38", "39", "36" ]
                     temperature: temp.sample,
                     status: status.sample,
                     farmer_id: 2,
-                    vet_officers_id: 2
+                    vet_officers_id: 1
                   }
 
               ])
