@@ -16,7 +16,6 @@
 
 		 <label>  Cow Owner </label>
 
-
 		       <%= f.select(:farmer_id, options_for_select(@farmer_options),{}, class: 'form-control' ) %>
 
 			</div>
@@ -24,14 +23,7 @@
 		  <div>
 			<label> Vet Officer </label>
 
-
-
-<<<<<<< HEAD
-     <%= f.select(:vet_officers_id, options_for_select(@vet_officer_options))%>
-=======
-		     <%= f.select(:VetOfficer_id, options_for_select(@vet_officer_options),{},class: 'form-control' )%>
->>>>>>> 28e87406b2ae827afdf2e5f22894d5a308e18716
-
+     <%= f.select(:vet_officers_id, options_for_select(@vet_officer_options),{},class: 'form-control' )%>
 
 			</div>
 			<div>

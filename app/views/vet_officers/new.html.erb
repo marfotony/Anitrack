@@ -1,45 +1,4 @@
-<<<<<<< HEAD
-<h2>Vet Officers</h2>
-<center><%= form_for @vet_officer do |f| %>
- <% if @success %>
- 	<div class="success"><%= @success %></div>
 
- 	<% else %>
-
- 	<div class="danger"><%= @error %></div>
- <% end %>
-	<div>
-		<label>Vet Officer Name</label>
-		  <%= f.text_field :name %>
-	</div>
-
-	<div>
-		<label>Office Location</label>
-		  <%= f.text_field :location %>
-
-	</div>
-	<div>
-		<label>Phone Number</label>
-
-		  <%= f.text_field :phone_number %>
-
-	</div>
-	<div>
-		
-		<label>Office Address</label>
-		  <%= f.text_field :address %>
-
-	</div>
-	<div>
-		<label>Profile Picture</label>
-		  <%= f.file_field :vprofile_pic %>
-
-	</div>
-	
-	<div>
-		  <%= f.submit "Add New Vet.Officer", class: "btn btn-warning" %>
-
-=======
 <div style="margin-top:5%; text-align: center;">
   <h1>New Vet Officer</h1>
 </div>
@@ -71,7 +30,7 @@
 
 			</div>
 			<div>
-				
+
 				<label>Office Address</label>
 				  <%= f.text_field :address, class: 'form-control' %>
 
@@ -81,12 +40,11 @@
 				  <%= f.file_field :vprofile_pic , class: 'form-control'%>
 
 			</div>
-			
+
 			<div>
 				  <%= f.submit "Add New Vet.Officer", class: "btn btn-warning form-control " %>
 
 			</div>
 		<% end %></center>
->>>>>>> 28e87406b2ae827afdf2e5f22894d5a308e18716
 	</div>
 </div>
