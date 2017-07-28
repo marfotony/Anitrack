@@ -36,9 +36,6 @@ function sendTextMessage(number, content) {
 
 }
 
-
-
-
 var ready =  function(){
   // send message to farmer
   $(".message-farmer").unbind('click').click(function(){
@@ -52,7 +49,7 @@ var ready =  function(){
       var Addresse        = farmer.address;
       var email           = "micnkru@gmail.com";
 
-      var content =  "Hello " + name + " you have " + numberOfAnimals + " of cows so far in good health we will notify you of any wrong thing thank you"
+      var content =  "Hello " + name + ". we have notices animal 24 needs immediate attention. We have contacted a vet officer to come check up on your farm immediately. Thank You."
       var $this =  $(this);
       $this.text("sending..");
 
@@ -72,7 +69,7 @@ var ready =  function(){
       var name        = vet_officer.name;
       var phoneNumber = vet_officer.phone_number;
 
-      var content =  "Hello " + name + "we have a farmer who has a problem with their flock please contact them";
+      var content =  "Hello Dr." + name + "A client from the volta region has an animal that could be suffering from indigestion. Please confirm if you are available to visit the farm. Thank You";
       var $this =  $(this);
       $this.text("sending..");
 
@@ -80,7 +77,6 @@ var ready =  function(){
         console.log(response);
         $this.text("sent");
       });
-
 
     })
 }
